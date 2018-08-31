@@ -11,12 +11,21 @@ module.exports = {
     publicPath: '/'
   },
   mode: 'development',
+  devtool: '',
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /.js?x$/,
         loader: 'babel-loader'
       },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.(woff|woff2|ttf|svg|eot|png|jpg)$/,
+        use: 'file-loader'
+      }
     ]
   }
 };

@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './main.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
 const mountNode = document.getElementById('app');
 
 const HelloWorld = (props) => {
-  console.log(props);
   return <h1>Hello world {props.userName}</h1>;
 };
 
-const ShowFrameworks = props => {
+const showFrameworks = props => {
   return (
-    <ul>
-      {props.frameworks.map(framework => {
-        return <li key={framework}>{framework}</li>;
-      })}
-    </ul>
+    <>
+      <div>PRIVET</div>
+      <div>KAK DELA</ div>
+    </>
   );
 };
 
@@ -22,7 +23,7 @@ const arr = ['Vue', 'Angular', 'React'];
 const frameworks = arr.map(framework => {
   return <li>{framework}</li>;
 });
-ReactDOM.render(<Users frameworks={['Vue', 'Angular', 'React']}/>, mountNode);
+ReactDOM.render(<showFrameworks frameworks={['Vue', 'Angular', 'React']}/>, mountNode);
 
 /*
 *
@@ -38,6 +39,8 @@ ReactDOM.render(<Users frameworks={['Vue', 'Angular', 'React']}/>, mountNode);
 * </ul>
 *
 * */
+
+
 
 
 
