@@ -3,12 +3,15 @@ import React, {Component} from 'react';
 import './app.css';
 import {HomePage} from './pages/home-page';
 import {AdminStorePage} from './pages/admin-store-page';
+import {UserPage} from './pages/user-store-page';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       activePage: 'homepage',
+      items: ['mac', 'lenovo'],
+      cartItems: ['qwerty'],
     };
   }
 
@@ -27,6 +30,8 @@ class App extends Component {
   render() {
     const {activePage} = this.state;
 
+    return <UserPage/>;
+
     if (activePage === 'homepage') {
       return (
         <HomePage
@@ -38,6 +43,10 @@ class App extends Component {
 
     if (activePage === 'admin-store-page') {
       return <AdminStorePage changeActivePage/>;
+    }
+
+    if (activePage === 'user-store-page') {
+      return null;
     }
 
     return (
