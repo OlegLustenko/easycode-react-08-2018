@@ -1,0 +1,10 @@
+body,
+html, #root {
+  height: 100%;
+}
+
+.card.breadcrumb {
+  background-color: #ffffff;
+  /*margin: 0;*/
+  margin: 0 0 .1rem 0;
+}
